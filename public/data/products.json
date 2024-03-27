@@ -1,0 +1,96 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Витрина кондитерская Celsius SC 90",
+      "price": 75000,
+      "description": "description",
+      "is_available": false,
+      "brand_id": 1,
+      "category_id": 1,
+      "images_src": [
+        {
+          "src": "/images/p-1-1.png",
+          "alt": ""
+        },
+        {
+          "src": "",
+          "alt": ""
+        },
+        {
+          "src": "",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Витрина кондитерская Celsius SC 90",
+      "price": 75000,
+      "description": "description",
+      "is_available": true,
+      "brand_id": 1,
+      "category_id": 1,
+      "images_src": [
+        {
+          "src": "/images/scb.jpg",
+          "alt": ""
+        },
+        {
+          "src": "",
+          "alt": ""
+        },
+        {
+          "src": "",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Ангара кондитер КУБ ЛЮКС 1,0",
+      "price": 104000,
+      "description": "description",
+      "is_available": true,
+      "brand_id": 2,
+      "category_id": 1,
+      "images_src": [
+        {
+          "src": "/images/cond1.jpg",
+          "alt": ""
+        },
+        {
+          "src": "",
+          "alt": ""
+        },
+        {
+          "src": "",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Льдогенератор Hicon Ice Maker",
+      "price": 15000,
+      "description": "description",
+      "is_available": true,
+      "brand_id": 4,
+      "category_id": 1,
+      "images_src": [
+        {
+          "src": "/images/ice2.jpg",
+          "alt": ""
+        },
+        {
+          "src": "",
+          "alt": ""
+        },
+        {
+          "src": "",
+          "alt": ""
+        }
+      ]
+    }
+  ]
+}

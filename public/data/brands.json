@@ -1,0 +1,24 @@
+{
+  "brands": [
+    {
+      "id": 1000,
+      "name": "Все бренды"
+    },
+    {
+      "id": 1,
+      "name": "Celsius"
+    },
+    {
+      "id": 2,
+      "name": "Ангара"
+    },
+    {
+      "id": 3,
+      "name": "Frostor"
+    },
+    {
+      "id": 4,
+      "name": "Hicon"
+    }
+  ]
+}
