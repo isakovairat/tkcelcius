@@ -1,4 +1,6 @@
 import {
+  ArrowLeft,
+  ArrowRight,
   LucideIcon,
   LucideProps,
   Menu,
@@ -6,6 +8,7 @@ import {
   Phone,
   Search,
   SunMedium,
+  X,
 } from "lucide-react"
 
 export type Icon = LucideIcon
@@ -16,6 +19,9 @@ export const Icons = {
   menu: Menu,
   search: Search,
   phone: Phone,
+  arrowLeft: ArrowLeft,
+  arrowRight: ArrowRight,
+  x: X,
   logo: (props: LucideProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
       <path

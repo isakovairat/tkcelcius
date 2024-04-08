@@ -17,7 +17,7 @@ export default function Page() {
           <div className="max-w-screen-xl py-4">
             <div className="mx-auto place-self-center">
               <img
-                className="w-full h-auto rounded-lg mb-4"
+                className="mb-4 h-auto w-full rounded-lg"
                 src="/images/3d/DDD1.png"
                 alt=""
               />
@@ -26,7 +26,7 @@ export default function Page() {
           <div className="mx-auto max-w-screen-xl py-4">
             <div className="mr-auto place-self-center">
               <img
-                className="w-full h-auto rounded-lg mb-4"
+                className="mb-4 h-auto w-full rounded-lg"
                 src="/images/3d/DDD2.png"
                 alt=""
               />
@@ -35,7 +35,7 @@ export default function Page() {
           <div className="mx-auto max-w-screen-xl py-4">
             <div className="mr-auto place-self-center">
               <img
-                className="w-full h-auto rounded-lg mb-4"
+                className="mb-4 h-auto w-full rounded-lg"
                 src="/images/3d/DDD3.png"
                 alt=""
               />
@@ -44,7 +44,7 @@ export default function Page() {
           <div className="mx-auto max-w-screen-xl py-4">
             <div className="mr-auto place-self-center">
               <img
-                className="w-full h-auto rounded-lg mb-4"
+                className="mb-4 h-auto w-full rounded-lg"
                 src="/images/3d/DDD4.png"
                 alt=""
               />
@@ -63,7 +63,7 @@ export default function Page() {
           <div className="max-w-screen-xl py-4">
             <div className="mx-auto place-self-center">
               <img
-                className="w-full h-auto rounded-lg mb-4"
+                className="mb-4 h-auto w-full rounded-lg"
                 src="/images/3d/DDD5.png"
                 alt=""
               />
@@ -72,7 +72,7 @@ export default function Page() {
           <div className="mx-auto max-w-screen-xl py-4">
             <div className="mr-auto place-self-center">
               <img
-                className="w-full h-auto rounded-lg mb-4"
+                className="mb-4 h-auto w-full rounded-lg"
                 src="/images/3d/DDD6.png"
                 alt=""
               />
@@ -90,7 +90,7 @@ export default function Page() {
           <div className="mx-auto max-w-screen-xl py-4">
             <div className="mr-auto place-self-center">
               <img
-                className="w-full h-auto rounded-lg mb-4"
+                className="mb-4 h-auto w-full rounded-lg"
                 src="/images/3d/DDD7.png"
                 alt=""
               />

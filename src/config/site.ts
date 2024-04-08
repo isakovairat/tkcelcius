@@ -1,3 +1,13 @@
+export const APP_ROUTES = {
+  "3D": "/3d",
+  ABOUT: "/about",
+  CONTACTS: "/contacts",
+  PRODUCT: "/product",
+  SEARCH: "/search",
+  WORKS: "/works",
+  MAIN: "/",
+}
+
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
@@ -5,30 +15,31 @@ export const siteConfig = {
   description: "Мир торгового холодильного оборудования",
   phone: "+79680008301",
   email: "tccelsius@mail.ru",
+  address: "Московская обл., Балашиха, Леоновское шоссе вл2 (ТК Фермерский)",
   mainNav: [
     {
       title: "Главная",
-      href: "/",
+      href: APP_ROUTES.MAIN,
       disabled: false,
     },
     {
       title: "О нас",
-      href: "/about",
+      href: APP_ROUTES.ABOUT,
       disabled: false,
     },
     {
       title: "Наши работы",
-      href: "/works",
+      href: APP_ROUTES.WORKS,
       disabled: false,
     },
     {
       title: "3D моделирование",
-      href: "/3d",
+      href: APP_ROUTES["3D"],
       disabled: false,
     },
     {
       title: "Контакты",
-      href: "/contacts",
+      href: APP_ROUTES.CONTACTS,
       disabled: false,
     },
   ],

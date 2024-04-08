@@ -6,6 +6,7 @@ import { NavItem } from "@/src/types/nav"
 interface MainNavProps {
   items?: NavItem[]
 }
+
 export const Footer = ({ items }: MainNavProps) => {
   return (
     <footer className="w-full border-t bg-background p-4 shadow md:flex md:items-center md:justify-between md:p-6">

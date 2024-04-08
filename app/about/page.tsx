@@ -1,3 +1,5 @@
+import { Box, KeyRound, Truck, Wallet, Wrench } from "lucide-react"
+
 /* eslint-disable @next/next/no-img-element */
 export default function Page() {
   return (
@@ -20,11 +22,11 @@ export default function Page() {
           <div className="max-w-screen-xl py-8">
             <div className="mx-auto place-self-center">
               <img
-                className="w-full h-auto rounded-lg mb-4"
+                className="mb-4 h-auto w-full rounded-lg"
                 src="/images/about/sr.jpg"
                 alt=""
               />
-              <p className="max-w-2xl font-light text-gray-500 md:text-lg lg:text-xl dark:text-gray-400">
+              <p className="max-w-2xl font-light text-gray-500 dark:text-gray-400 md:text-lg lg:text-xl">
                 Выставочный зал г. Балашиха, Леоновское шоссе вл2
               </p>
             </div>
@@ -32,11 +34,11 @@ export default function Page() {
           <div className="mx-auto max-w-screen-xl py-8">
             <div className="mr-auto place-self-center">
               <img
-                className="w-full h-auto rounded-lg mb-4"
+                className="mb-4 h-auto w-full rounded-lg"
                 src="/images/about/angar.jpeg"
                 alt=""
               />
-              <p className="max-w-2xl font-light text-gray-500 md:text-lg lg:text-xl dark:text-gray-400">
+              <p className="max-w-2xl font-light text-gray-500 dark:text-gray-400 md:text-lg lg:text-xl">
                 Складское хранение - более 1000 м3
               </p>
             </div>
@@ -52,10 +54,10 @@ export default function Page() {
               </div>
               <div className="grid gap-8 sm:grid-cols-2 md:gap-12 xl:grid-cols-3 xl:gap-16">
                 <div className="flex gap-4 md:gap-6">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gray-800 text-white shadow-lg md:h-14 md:w-14 md:rounded-xl">
+                  <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-gray-800 text-white shadow-lg md:size-14 md:rounded-xl">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
+                      className="size-6"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -71,156 +73,84 @@ export default function Page() {
 
                   <div>
                     <h3 className="mb-2 text-lg font-semibold md:text-xl">
-                      24/7
+                      Оптовые продажи
                     </h3>
                     <p className="mb-2 text-gray-500">
-                      Мы работаем круглосуточно! Отгрузка в течение 30 минут
+                      Поставляем оборудование для крупнейших Российских сетей
                     </p>
                   </div>
                 </div>
 
                 <div className="flex gap-4 md:gap-6">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gray-800 text-white shadow-lg md:h-14 md:w-14 md:rounded-xl">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                      />
-                    </svg>
+                  <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-gray-800 text-white shadow-lg md:size-14 md:rounded-xl">
+                    <Wallet />
                   </div>
 
                   <div>
                     <h3 className="mb-2 text-lg font-semibold md:text-xl">
-                      3D
+                      Розничные продажи
                     </h3>
                     <p className="mb-2 text-gray-500">
-                      Нарисуем 3D проект вашего помещения в профессиональном
-                      приложении SketchUp. Для наших клиентов данная услуга
-                      бесплатная.
+                      Три торговых шоурума работают для вас
                     </p>
                   </div>
                 </div>
 
                 <div className="flex gap-4 md:gap-6">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gray-800 text-white shadow-lg md:h-14 md:w-14 md:rounded-xl">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
-                      />
-                    </svg>
+                  <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-gray-800 text-white shadow-lg md:size-14 md:rounded-xl">
+                    <KeyRound />
                   </div>
 
                   <div>
                     <h3 className="mb-2 text-lg font-semibold md:text-xl">
-                      Гарантия
+                      Открытие под ключ
                     </h3>
                     <p className="mb-2 text-gray-500">
-                      На все новое оборудование распространяется гарантийное
-                      обслуживание 1 год. По истечению срока гарантии оказываем
-                      послегарантийное обслуживание
+                      Оснащаем торговые точки всем необходимым оборудованием
                     </p>
                   </div>
                 </div>
 
                 <div className="flex gap-4 md:gap-6">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gray-800 text-white shadow-lg md:h-14 md:w-14 md:rounded-xl">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M13 10V3L4 14h7v7l9-11h-7z"
-                      />
-                    </svg>
+                  <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-gray-800 text-white shadow-lg md:size-14 md:rounded-xl">
+                    <Wrench />
                   </div>
 
                   <div>
                     <h3 className="mb-2 text-lg font-semibold md:text-xl">
-                      Доставка
+                      Сервисное обслуживание
                     </h3>
                     <p className="mb-2 text-gray-500">
-                      Мы помогаем клиентам осуществить доставку в любую точку
-                      России
+                      Поддерживаем наших клиентов 24/7
                     </p>
                   </div>
                 </div>
 
                 <div className="flex gap-4 md:gap-6">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gray-800 text-white shadow-lg md:h-14 md:w-14 md:rounded-xl">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
-                      />
-                    </svg>
+                  <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-gray-800 text-white shadow-lg md:size-14 md:rounded-xl">
+                    <Box />
                   </div>
                   <div>
                     <h3 className="mb-2 text-lg font-semibold md:text-xl">
-                      Ассортимент
+                      3D Моделирование
                     </h3>
                     <p className="mb-2 text-gray-500">
-                      Наш ассортимент постоянно пополняется, вы можете выбрать
-                      из существующего оборудования, либо сделать индивидуальный
-                      заказ.
+                      Осуществляем с помощью профессионального инструмента
+                      Sketch Up
                     </p>
                   </div>
                 </div>
 
                 <div className="flex gap-4 md:gap-6">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gray-800 text-white shadow-lg md:h-14 md:w-14 md:rounded-xl">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
-                      />
-                    </svg>
+                  <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-gray-800 text-white shadow-lg md:size-14 md:rounded-xl">
+                    <Truck />
                   </div>
                   <div>
                     <h3 className="mb-2 text-lg font-semibold md:text-xl">
-                      Контроль качества
+                      Логистика по всему миру
                     </h3>
                     <p className="mb-2 text-gray-500">
-                      Все оборудование проходит полную проверку и техническое
-                      обслуживание
+                      Помогаем с доставкой в любую точку мира
                     </p>
                   </div>
                 </div>

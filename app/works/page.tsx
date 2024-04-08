@@ -7,11 +7,11 @@ export default function Page() {
         <div className="max-w-screen-xl py-8">
           <div className="mx-auto place-self-center">
             <img
-              className="w-full h-auto rounded-lg mb-4"
+              className="mb-4 h-auto w-full rounded-lg"
               src="http://www.tccelsius.ru/assets/images/works/work1.jpeg"
               alt=""
             />
-            <p className="max-w-2xl font-light text-gray-500 md:text-lg lg:text-xl dark:text-gray-400">
+            <p className="max-w-2xl font-light text-gray-500 dark:text-gray-400 md:text-lg lg:text-xl">
               Рыбная лавка &laquo;Дары моря&raquo; Балашиха, Проспект Героев, 2.
               <br />
               Оборудование: кубические витрины Ангара
@@ -21,11 +21,11 @@ export default function Page() {
         <div className="mx-auto max-w-screen-xl py-8">
           <div className="mr-auto place-self-center">
             <img
-              className="w-full h-auto rounded-lg mb-4"
+              className="mb-4 h-auto w-full rounded-lg"
               src="http://www.tccelsius.ru/assets/images/works/work4.jpeg"
               alt=""
             />
-            <p className="max-w-2xl font-light text-gray-500 md:text-lg lg:text-xl dark:text-gray-400">
+            <p className="max-w-2xl font-light text-gray-500 dark:text-gray-400 md:text-lg lg:text-xl">
               Магазин &laquo;МАСОТЕКА&raquo; Кронштадтский бульвар, 7&nbsp;ТЦ
               Корона.
               <br />
@@ -36,11 +36,11 @@ export default function Page() {
         <div className="mx-auto grid max-w-screen-xl py-8">
           <div className="mr-auto place-self-center">
             <img
-              className="w-full h-auto rounded-lg mb-4"
+              className="mb-4 h-auto w-full rounded-lg"
               src="http://www.tccelsius.ru/assets/images/works/work2.jpeg"
               alt=""
             />
-            <p className="max-w-2xl font-light text-gray-500 md:text-lg lg:text-xl dark:text-gray-400">
+            <p className="max-w-2xl font-light text-gray-500 dark:text-gray-400 md:text-lg lg:text-xl">
               Магазин мясной продукции &laquo;Беркат&raquo; 1-я Квесисская
               улица, 18&nbsp;(Бутырский рынок).
               <br />
@@ -55,7 +55,7 @@ export default function Page() {
               src="http://www.tccelsius.ru/assets/images/works/work3.jpeg"
               alt=""
             />
-            <p className="max-w-2xl font-light text-gray-500 md:text-lg lg:text-xl dark:text-gray-400">
+            <p className="max-w-2xl font-light text-gray-500 dark:text-gray-400 md:text-lg lg:text-xl">
               Магазин мясных полуфабрикатов, сыра и&nbsp;молока
               &laquo;KROLL&raquo; Смоленский бульвар, 17&nbsp;ст1.
               <br />

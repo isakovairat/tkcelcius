@@ -14,8 +14,13 @@ export default function Page() {
         <Link href={`mailto:${siteConfig.email}`}>
           <Button>Написать нам</Button>
         </Link>
+        <Link href={"https://wa.me/79680008301?text=Здравствуйте"}>
+          <Button className="bg-[#25d366] hover:bg-[#128c7e] focus:bg-[#25d366] active:bg-[#25d366]">
+            Написать нам в WhatsApp
+          </Button>
+        </Link>
       </div>
-      <p>Московская обл., Балашиха, Леоновское шоссе вл2 (ТК Фермерский)</p>
+      <p>Наш адрес: {siteConfig.address}</p>
       <div className="my-6 h-[600px] w-full">
         <iframe
           src="https://yandex.ru/map-widget/v1/?z=12&amp;ol=biz&amp;oid=186921048508"

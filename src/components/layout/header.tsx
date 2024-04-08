@@ -7,10 +7,9 @@ import { ThemeToggle } from "@/src/components/theme-toggle"
 import { Button, buttonVariants } from "@/src/components/ui/button"
 import { siteConfig } from "@/src/config/site"
 import { useSidebarStore } from "@/src/stores/sidebarStore"
-import { useScrollLock, useToggle } from "usehooks-ts"
-import { useStore } from "zustand"
+import { useScrollLock } from "usehooks-ts"
 
-import { Sidebar } from "./site-sidebar"
+import { Sidebar } from "./sidebar"
 
 export function SiteHeader() {
   const drawer = useSidebarStore((state: any) => state.drawer)

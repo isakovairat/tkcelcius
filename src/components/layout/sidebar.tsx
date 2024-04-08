@@ -1,33 +1,35 @@
 import Link from "next/link"
-import { useRouter } from "next/navigation"
+// import { useRouter } from "next/navigation"
 import { siteConfig } from "@/src/config/site"
 import { cn } from "@/src/lib/utils"
 import { useSidebarStore } from "@/src/stores/sidebarStore"
-import { useForm } from "react-hook-form"
 
-import { Icons } from "./icons"
-import { Button } from "./ui/button"
-import { Input } from "./ui/input"
+// import { useForm } from "react-hook-form"
+
+import { Icons } from "../icons"
+import { Button } from "../ui/button"
+
+// import { Input } from "../ui/input"
 
 export type SidebarProps = {
   drawer: boolean
   toggleDrawer: () => void
 }
 
-type TForm = {
-  search: string
-}
+// type TForm = {
+//   search: string
+// }
 
 export const Sidebar = () => {
-  const router = useRouter()
-  const { register, handleSubmit } = useForm<TForm>()
+  // const router = useRouter()
+  // const { register, handleSubmit } = useForm<TForm>()
   const drawer = useSidebarStore((state: any) => state.drawer)
   const toggleDrawer = useSidebarStore((state: any) => state.toggleDrawer)
 
-  const onSubmit = ({ search }: TForm) => {
-    toggleDrawer()
-    router.push(`/search?q=${search}`)
-  }
+  // const onSubmit = ({ search }: TForm) => {
+  //   toggleDrawer()
+  //   router.push(`/search?q=${search}`)
+  // }
 
   return (
     <aside
@@ -50,11 +52,11 @@ export const Sidebar = () => {
             aria-expanded={drawer}
             onClick={toggleDrawer}
           >
-            <Icons.menu className="size-5" />
+            <Icons.x className="size-5" />
             <span className="sr-only">menu</span>
           </Button>
         </div>
-        <form role="search" onSubmit={handleSubmit(onSubmit)}>
+        {/* <form role="search" onSubmit={handleSubmit(onSubmit)}>
           <div className="container relative my-8">
             <Icons.search className="absolute inset-y-0 my-auto ml-2 size-5" />
             <span className="sr-only">Search</span>
@@ -65,7 +67,7 @@ export const Sidebar = () => {
               className="pl-10 pr-4"
             />
           </div>
-        </form>
+        </form> */}
         <nav className="container my-8 flex flex-col gap-6">
           {siteConfig.mainNav.map((nav) => (
             <Link
