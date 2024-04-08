@@ -52,7 +52,7 @@ export function SiteHeader() {
           </div>
         </div>
       </header>
-      <Sidebar drawer={drawer} toggleDrawer={toggleDrawer} />
+      <Sidebar />
     </>
   )
 }
