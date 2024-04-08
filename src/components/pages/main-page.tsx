@@ -91,7 +91,7 @@ const MainPage = () => {
           return product.brand_id === selectedBrand
         }
       })
-  }, [selectedCategory, selectedBrand])
+  }, [products, selectedCategory, categories, selectedBrand, brands])
 
   return (
     <>

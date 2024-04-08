@@ -12,7 +12,7 @@ const NotFound = () => {
           />
 
           <div className="relative flex flex-col items-center justify-center p-8 md:p-16">
-            <h1 className="mb-2 text-center text-2 xl font-bold text-white md:text-3xl lg:text-4xl">
+            <h1 className="text-2 xl mb-2 text-center font-bold text-white md:text-3xl lg:text-4xl">
               404
             </h1>
 
