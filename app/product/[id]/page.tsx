@@ -86,7 +86,7 @@ export default function Page({ params }: { params: { id: string } }) {
                 <tbody>
                   {Object.entries(product?.specifications).map(
                     ([key, value]) => (
-                      <tr>
+                      <tr key={key}>
                         <td className="border border-slate-300 p-2">{key}</td>
                         <td className="border border-slate-300 p-2">{value}</td>
                       </tr>

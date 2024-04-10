@@ -14,13 +14,15 @@ export const ProductCard = ({ product }: ProductCardProps) => {
     <Link href={`${APP_ROUTES.PRODUCT}/${product.id}`}>
       <Card className="w-auto cursor-pointer">
         <CardHeader>
-          <div className="transition duration-300 hover:scale-110">
-            <img
-              className="h-auto rounded-lg"
-              src={product.images_src[0].src}
-              alt={product.images_src[0].alt}
-            />
-          </div>
+          {product.images_src && product.images_src.length > 0 && (
+            <div className="transition duration-300 hover:scale-110">
+              <img
+                className="h-auto rounded-lg"
+                src={product.images_src[0].src}
+                alt={product.images_src[0].alt}
+              />
+            </div>
+          )}
         </CardHeader>
         <CardContent>
           <CardTitle>{product.name}</CardTitle>
