@@ -78,26 +78,24 @@ export default function Page({ params }: { params: { id: string } }) {
             <p className="pb-2 font-bold">Описание</p>
             <p className="text-md">{product?.description}</p>
           </div>
-          <div className="my-2 h-px w-full bg-gray-300" />
-          {product?.specifications && (
-            <div>
-              <p className="pb-2 font-bold">Технические характеристики</p>
-              <table className="table-auto border border-slate-400">
-                <tbody>
-                  {Object.entries(product?.specifications).map(
-                    ([key, value]) => (
-                      <tr key={key}>
-                        <td className="border border-slate-300 p-2">{key}</td>
-                        <td className="border border-slate-300 p-2">{value}</td>
-                      </tr>
-                    )
-                  )}
-                </tbody>
-              </table>
-            </div>
-          )}
         </div>
       </div>
+      {product?.specifications && (
+        <div className="flex flex-col gap-2">
+          <div className="my-2 h-px w-full bg-gray-300" />
+          <p className="pb-2 font-bold">Технические характеристики</p>
+          <table className="table-auto border border-slate-400">
+            <tbody>
+              {Object.entries(product?.specifications).map(([key, value]) => (
+                <tr key={key}>
+                  <td className="border border-slate-300 p-2">{key}</td>
+                  <td className="border border-slate-300 p-2">{value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </section>
   )
 }
