@@ -1,8 +1,9 @@
 import Link from "next/link"
-import { NavItem } from "@/src/types/nav"
-
 import { siteConfig } from "@/src/config/site"
 import { cn } from "@/src/lib/utils"
+import { NavItem } from "@/src/types/nav"
+
+import styles from "./main-nav.module.css"
 
 interface MainNavProps {
   items?: NavItem[]
@@ -12,7 +13,11 @@ export function MainNav({ items }: MainNavProps) {
   return (
     <div className="flex gap-6 md:gap-10">
       <Link href="/" className="flex items-center space-x-2">
-        <span className="inline-block font-bold">{siteConfig.name}</span>
+        <span
+          className={cn("inline-block font-bold", styles["main-nav-title"])}
+        >
+          {siteConfig.name}
+        </span>
       </Link>
       {items?.length && (
         <nav className="hidden gap-6 md:flex">
