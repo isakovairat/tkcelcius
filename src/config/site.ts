@@ -8,6 +8,9 @@ export const APP_ROUTES = {
   MAIN: "/",
 }
 
+export const S3_URL =
+  "https://ethtnhfnfqyxjtrfskah.supabase.co/storage/v1/object/public/tkcelcius"
+
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {

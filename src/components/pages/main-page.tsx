@@ -46,7 +46,7 @@ const MainPage = () => {
     // or const query = `${'?'.repeat(search.length && 1)}${search}`;
     const query = search ? `?${search}` : ""
 
-    router.push(`${pathname}${query}`)
+    router.push(`${pathname}${query}`, { scroll: false })
   }
 
   const handleBrandChange = (id: string) => {
@@ -65,14 +65,14 @@ const MainPage = () => {
     // or const query = `${'?'.repeat(search.length && 1)}${search}`;
     const query = search ? `?${search}` : ""
 
-    router.push(`${pathname}${query}`)
+    router.push(`${pathname}${query}`, { scroll: false })
   }
 
   const handleCleanFilters = () => {
     setSelectedCategory(categories[0].id)
     setSelectedBrand(brands[0].id)
 
-    router.push(`${pathname}`)
+    router.push(`${pathname}`, { scroll: false })
   }
 
   const filteredProducts = useMemo(() => {
