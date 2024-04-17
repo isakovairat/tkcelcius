@@ -1,3 +1,4 @@
+import { Metadata } from "next"
 import Link from "next/link"
 import { getCategory } from "@/src/api/categories"
 import { getProduct, getProducts } from "@/src/api/products"
@@ -11,7 +12,7 @@ import {
   BreadcrumbSeparator,
 } from "@/src/components/ui/breadcrumb"
 import { Button } from "@/src/components/ui/button"
-import { APP_ROUTES } from "@/src/config/site"
+import { APP_ROUTES, siteConfig } from "@/src/config/site"
 
 export function generateStaticParams() {
   return getProducts().map((product) => ({ id: product.id.toString() }))
@@ -25,7 +26,7 @@ export default function Page({ params }: { params: { id: string } }) {
     <section className="container items-center pb-8 pt-6 md:py-10">
       <Breadcrumb className="mb-4">
         <BreadcrumbList>
-          <BreadcrumbItem>
+          <BreadcrumbItem className="font-semibold">
             <BreadcrumbLink asChild>
               <Link href={APP_ROUTES.MAIN}>Главная</Link>
             </BreadcrumbLink>
