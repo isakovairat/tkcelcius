@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[6835],{7745:function(n,e,a){a.d(e,{h:function(){return t}});let t=["emoji"]},6835:function(n,e,a){a.d(e,{loadEmojiShape:function(){return loadEmojiShape}});var t=a(7745);async function loadEmojiShape(n,e=!0){let{EmojiDrawer:i}=await a.e(3820).then(a.bind(a,3820));await n.addShape(t.h,new i,e)}}}]);

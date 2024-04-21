@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[5356],{5356:function(e,a,n){n.d(a,{loadCircleShape:function(){return loadCircleShape}});async function loadCircleShape(e,a=!0){let{CircleDrawer:c}=await n.e(1195).then(n.bind(n,1195));await e.addShape("circle",new c,a)}}}]);

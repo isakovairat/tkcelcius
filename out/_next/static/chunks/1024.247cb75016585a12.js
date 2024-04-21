@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[1024],{8390:function(e,a,t){t.d(a,{loadLifeUpdater:function(){return loadLifeUpdater}});async function loadLifeUpdater(e,a=!0){await e.addParticleUpdater("life",async e=>{let{LifeUpdater:a}=await t.e(7609).then(t.bind(t,7609));return new a(e)},a)}}}]);

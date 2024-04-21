@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[5109],{3956:function(a,t,e){e.d(t,{loadOpacityUpdater:function(){return loadOpacityUpdater}});async function loadOpacityUpdater(a,t=!0){await a.addParticleUpdater("opacity",async a=>{let{OpacityUpdater:t}=await e.e(8396).then(e.bind(e,8396));return new t(a)},t)}}}]);

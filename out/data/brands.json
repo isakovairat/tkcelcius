@@ -1,0 +1,29 @@
+{
+  "brands": [
+    {
+      "id": 1000,
+      "name": "Все бренды",
+      "slug": "all"
+    },
+    {
+      "id": 1,
+      "name": "Celsius",
+      "slug": "celsius"
+    },
+    {
+      "id": 2,
+      "name": "Ангара",
+      "slug": "angara"
+    },
+    {
+      "id": 3,
+      "name": "Frostor",
+      "slug": "frostor"
+    },
+    {
+      "id": 4,
+      "name": "Carboma",
+      "slug": "carboma"
+    }
+  ]
+}

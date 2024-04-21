@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[2057],{2057:function(a,e,n){n.d(e,{loadParallaxMover:function(){return loadParallaxMover}});async function loadParallaxMover(a,e=!0){await a.addMover("parallax",async()=>{let{ParallaxMover:a}=await n.e(735).then(n.bind(n,735));return new a},e)}}}]);

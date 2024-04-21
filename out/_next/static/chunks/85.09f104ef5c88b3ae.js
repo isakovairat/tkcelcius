@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[85],{85:function(t,n,a){a.d(n,{loadExternalAttractInteraction:function(){return loadExternalAttractInteraction}});async function loadExternalAttractInteraction(t,n=!0){await t.addInteractor("externalAttract",async n=>{let{Attractor:e}=await a.e(5605).then(a.bind(a,5605));return new e(t,n)},n)}}}]);

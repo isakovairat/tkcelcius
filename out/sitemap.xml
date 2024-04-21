@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    
+            <url>
+              <loc>https://tkcelcius.ru/</loc>
+              <lastmod>2024-04-21T15:17:55.596Z</lastmod>
+              <changefreq>daily</changefreq>
+              <priority>1</priority>
+            </url>
+          
+            <url>
+              <loc>https://tkcelcius.ru/3d</loc>
+              <lastmod>2024-04-21T15:17:55.596Z</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.5</priority>
+            </url>
+          
+            <url>
+              <loc>https://tkcelcius.ru/about</loc>
+              <lastmod>2024-04-21T15:17:55.596Z</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.5</priority>
+            </url>
+          
+            <url>
+              <loc>https://tkcelcius.ru/contacts</loc>
+              <lastmod>2024-04-21T15:17:55.596Z</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.5</priority>
+            </url>
+          
+            <url>
+              <loc>https://tkcelcius.ru/works</loc>
+              <lastmod>2024-04-21T15:17:55.596Z</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.5</priority>
+            </url>
+          
+            <url>
+              <loc>https://tkcelcius.ru/product/1</loc>
+              <lastmod>2024-04-17T19:38:44.213Z</lastmod>
+              <changefreq>daily</changefreq>
+              <priority>0.8</priority>
+            </url>
+          
+            <url>
+              <loc>https://tkcelcius.ru/product/2</loc>
+              <lastmod>2024-04-17T19:44:21.825Z</lastmod>
+              <changefreq>daily</changefreq>
+              <priority>0.8</priority>
+            </url>
+          
+            <url>
+              <loc>https://tkcelcius.ru/product/3</loc>
+              <lastmod>2024-04-17T19:58:00.559Z</lastmod>
+              <changefreq>daily</changefreq>
+              <priority>0.8</priority>
+            </url>
+          
+    </urlset>
+  
