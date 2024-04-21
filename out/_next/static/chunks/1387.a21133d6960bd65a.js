@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[1387],{1387:function(e,n,t){t.d(n,{LineDrawer:function(){return LineDrawer}});let LineDrawer=class LineDrawer{draw(e){!function(e){let{context:n,particle:t,radius:a}=e,r=t.shapeData;n.moveTo(-a,0),n.lineTo(a,0),n.lineCap=r?.cap??"butt"}(e)}getSidesCount(){return 1}}}}]);
