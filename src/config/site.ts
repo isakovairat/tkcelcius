@@ -20,11 +20,11 @@ export const siteConfig = {
   email: "tccelsius@mail.ru",
   address: "Московская обл., Балашиха, Леоновское шоссе вл2 (ТК Фермерский)",
   mainNav: [
-    {
-      title: "Главная",
-      href: APP_ROUTES.MAIN,
-      disabled: false,
-    },
+    // {
+    //   title: "Главная",
+    //   href: APP_ROUTES.MAIN,
+    //   disabled: false,
+    // },
     {
       title: "О нас",
       href: APP_ROUTES.ABOUT,

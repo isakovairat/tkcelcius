@@ -12,9 +12,8 @@ import {
   BreadcrumbSeparator,
 } from "@/src/components/ui/breadcrumb"
 import { Button } from "@/src/components/ui/button"
-import { APP_ROUTES, siteConfig } from "@/src/config/site"
+import { APP_ROUTES } from "@/src/config/site"
 import { Product } from "@prisma/client"
-import { KeyRound } from "lucide-react"
 
 type Props = {
   params: { id: string }
@@ -27,7 +26,6 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const id = params.id
   const product = await getProduct(Number(id))
-  // optionally access and extend (rather than replace) parent metadata
   const previousImages = (await parent).openGraph?.images || []
   const images = product?.images as Record<string, string>[]
 
@@ -88,7 +86,7 @@ export default async function Page({ params }: { params: { id: string } }) {
           </div>
         )}
         {product?.specifications && (
-          <div className="mb-2 mt-6 flex flex-col gap-2">
+          <div className="mb-2 mt-6 flex flex-col gap-2 lg:w-1/2">
             <p className="pb-2 font-bold">Технические характеристики</p>
             <table>
               {Object.entries(product?.specifications).map(([key, value]) => (
@@ -96,7 +94,7 @@ export default async function Page({ params }: { params: { id: string } }) {
                   <td className="text-balance border-b py-1 text-sm font-medium text-muted-foreground">
                     {key}
                   </td>
-                  <td className="text-balance border-b text-right text-sm">
+                  <td className="text-balance border-b text-right text-sm lowercase">
                     {value}
                   </td>
                 </tr>
@@ -118,7 +116,9 @@ export default async function Page({ params }: { params: { id: string } }) {
             <p className="text-3xl font-bold">{product?.price} ₽</p>
           </div>
           <div>
-            <Link href={"https://wa.me/79680008301?text=Здравствуйте"}>
+            <Link
+              href={`https://wa.me/79680008301?text=Здравствуйте, хочу купить ${product?.name}`}
+            >
               <Button size={"lg"} className="bg-[#466391] hover:bg-[#466391]">
                 Купить
               </Button>

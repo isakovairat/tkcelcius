@@ -19,12 +19,12 @@ export default function Page() {
           импортерами торгового оборудования из&nbsp;Китая.
         </p>
         <div className="grid lg:grid-cols-2 lg:gap-6">
-          <div className="max-w-screen-xl py-8">
+          <div className="mx-auto max-w-screen-xl py-8">
             <div className="mx-auto place-self-center">
               <div className="relative mb-4 overflow-hidden rounded-lg bg-cover bg-no-repeat">
                 <img
                   src="/images/sr.jpg"
-                  className="transition duration-300 ease-in-out hover:scale-105 "
+                  className="h-[400px] rounded-lg object-cover transition duration-300 ease-in-out hover:scale-105"
                   alt=""
                 />
               </div>
@@ -38,7 +38,7 @@ export default function Page() {
               <div className="relative mb-4 overflow-hidden rounded-lg bg-cover bg-no-repeat">
                 <img
                   src="/images/angar.jpeg"
-                  className="transition duration-300 ease-in-out hover:scale-105 "
+                  className="h-[400px] rounded-lg object-cover transition duration-300 ease-in-out hover:scale-105"
                   alt=""
                 />
               </div>
