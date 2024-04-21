@@ -18,7 +18,7 @@ export default function Page() {
             <div className="mx-auto place-self-center">
               <img
                 className="mb-4 h-auto w-full rounded-lg"
-                src="/images/3d/DDD1.png"
+                src="/images/DDD1.png"
                 alt=""
               />
             </div>
@@ -27,7 +27,7 @@ export default function Page() {
             <div className="mr-auto place-self-center">
               <img
                 className="mb-4 h-auto w-full rounded-lg"
-                src="/images/3d/DDD2.png"
+                src="/images/DDD2.png"
                 alt=""
               />
             </div>
@@ -36,7 +36,7 @@ export default function Page() {
             <div className="mr-auto place-self-center">
               <img
                 className="mb-4 h-auto w-full rounded-lg"
-                src="/images/3d/DDD3.png"
+                src="/images/DDD3.png"
                 alt=""
               />
             </div>
@@ -45,7 +45,7 @@ export default function Page() {
             <div className="mr-auto place-self-center">
               <img
                 className="mb-4 h-auto w-full rounded-lg"
-                src="/images/3d/DDD4.png"
+                src="/images/DDD4.png"
                 alt=""
               />
             </div>
@@ -64,7 +64,7 @@ export default function Page() {
             <div className="mx-auto place-self-center">
               <img
                 className="mb-4 h-auto w-full rounded-lg"
-                src="/images/3d/DDD5.png"
+                src="/images/DDD5.png"
                 alt=""
               />
             </div>
@@ -73,7 +73,7 @@ export default function Page() {
             <div className="mr-auto place-self-center">
               <img
                 className="mb-4 h-auto w-full rounded-lg"
-                src="/images/3d/DDD6.png"
+                src="/images/DDD6.png"
                 alt=""
               />
             </div>
@@ -91,7 +91,7 @@ export default function Page() {
             <div className="mr-auto place-self-center">
               <img
                 className="mb-4 h-auto w-full rounded-lg"
-                src="/images/3d/DDD7.png"
+                src="/images/DDD7.png"
                 alt=""
               />
             </div>

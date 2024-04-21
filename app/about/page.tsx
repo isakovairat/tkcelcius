@@ -21,11 +21,13 @@ export default function Page() {
         <div className="grid lg:grid-cols-2 lg:gap-6">
           <div className="max-w-screen-xl py-8">
             <div className="mx-auto place-self-center">
-              <img
-                className="mb-4 h-auto w-full rounded-lg"
-                src="/images/about/sr.jpg"
-                alt=""
-              />
+              <div className="relative mb-4 overflow-hidden rounded-lg bg-cover bg-no-repeat">
+                <img
+                  src="/images/sr.jpg"
+                  className="transition duration-300 ease-in-out hover:scale-105 "
+                  alt=""
+                />
+              </div>
               <p className="max-w-2xl font-light text-gray-500 dark:text-gray-400 md:text-lg lg:text-xl">
                 Выставочный зал г. Балашиха, Леоновское шоссе вл2
               </p>
@@ -33,11 +35,13 @@ export default function Page() {
           </div>
           <div className="mx-auto max-w-screen-xl py-8">
             <div className="mr-auto place-self-center">
-              <img
-                className="mb-4 h-auto w-full rounded-lg"
-                src="/images/about/angar.jpeg"
-                alt=""
-              />
+              <div className="relative mb-4 overflow-hidden rounded-lg bg-cover bg-no-repeat">
+                <img
+                  src="/images/angar.jpeg"
+                  className="transition duration-300 ease-in-out hover:scale-105 "
+                  alt=""
+                />
+              </div>
               <p className="max-w-2xl font-light text-gray-500 dark:text-gray-400 md:text-lg lg:text-xl">
                 Складское хранение - более 1000 м3
               </p>
@@ -54,7 +58,7 @@ export default function Page() {
               </div>
               <div className="grid gap-8 sm:grid-cols-2 md:gap-12 xl:grid-cols-3 xl:gap-16">
                 <div className="flex gap-4 md:gap-6">
-                  <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-gray-800 text-white shadow-lg md:size-14 md:rounded-xl">
+                  <div className=" flex size-12 shrink-0 items-center justify-center rounded-lg bg-[#466391] text-white shadow-lg transition-all hover:bg-[#b18ca2] md:size-14 md:rounded-xl">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="size-6"
@@ -82,7 +86,7 @@ export default function Page() {
                 </div>
 
                 <div className="flex gap-4 md:gap-6">
-                  <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-gray-800 text-white shadow-lg md:size-14 md:rounded-xl">
+                  <div className=" flex size-12 shrink-0 items-center justify-center rounded-lg bg-[#466391] text-white shadow-lg transition-all hover:bg-[#b18ca2] md:size-14 md:rounded-xl">
                     <Wallet />
                   </div>
 
@@ -97,7 +101,7 @@ export default function Page() {
                 </div>
 
                 <div className="flex gap-4 md:gap-6">
-                  <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-gray-800 text-white shadow-lg md:size-14 md:rounded-xl">
+                  <div className=" flex size-12 shrink-0 items-center justify-center rounded-lg bg-[#466391] text-white shadow-lg transition-all hover:bg-[#b18ca2] md:size-14 md:rounded-xl">
                     <KeyRound />
                   </div>
 
@@ -112,7 +116,7 @@ export default function Page() {
                 </div>
 
                 <div className="flex gap-4 md:gap-6">
-                  <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-gray-800 text-white shadow-lg md:size-14 md:rounded-xl">
+                  <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-[#466391] text-white shadow-lg transition-all hover:bg-[#b18ca2] md:size-14 md:rounded-xl">
                     <Wrench />
                   </div>
 
@@ -127,7 +131,7 @@ export default function Page() {
                 </div>
 
                 <div className="flex gap-4 md:gap-6">
-                  <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-gray-800 text-white shadow-lg md:size-14 md:rounded-xl">
+                  <div className=" flex size-12 shrink-0 items-center justify-center rounded-lg bg-[#466391] text-white shadow-lg transition-all hover:bg-[#b18ca2] md:size-14 md:rounded-xl">
                     <Box />
                   </div>
                   <div>
@@ -142,8 +146,8 @@ export default function Page() {
                 </div>
 
                 <div className="flex gap-4 md:gap-6">
-                  <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-gray-800 text-white shadow-lg md:size-14 md:rounded-xl">
-                    <Truck />
+                  <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-[#466391] text-white shadow-lg transition-all hover:bg-[#b18ca2] md:size-14 md:rounded-xl">
+                    <Truck className="" />
                   </div>
                   <div>
                     <h3 className="mb-2 text-lg font-semibold md:text-xl">

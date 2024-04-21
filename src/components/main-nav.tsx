@@ -12,15 +12,18 @@ interface MainNavProps {
 export function MainNav({ items }: MainNavProps) {
   return (
     <div className="flex gap-6 md:gap-10">
-      <Link href="/" className="flex items-center space-x-2">
+      <Link href="/" className="flex items-center space-x-2 ">
         <span
-          className={cn("inline-block font-bold", styles["main-nav-title"])}
+          className={cn(
+            "inline-block font-raleway text-2xl font-bold uppercase text-slate-50",
+            styles["main-nav-title-hover"]
+          )}
         >
           {siteConfig.name}
         </span>
       </Link>
       {items?.length && (
-        <nav className="hidden gap-6 md:flex">
+        <nav className="hidden gap-6 md:flex ">
           {items?.map(
             (item) =>
               item.href && (
@@ -28,7 +31,7 @@ export function MainNav({ items }: MainNavProps) {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "flex items-center text-sm font-medium text-muted-foreground",
+                    "flex items-center text-sm font-medium text-slate-50",
                     item.disabled && "cursor-not-allowed opacity-80"
                   )}
                 >

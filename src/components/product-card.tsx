@@ -1,37 +1,40 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link"
+import { Product } from "@prisma/client"
 
 import { APP_ROUTES } from "../config/site"
 import { Badge } from "./ui/badge"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card"
 
 type ProductCardProps = {
-  product: any
+  product: Product
 }
 
 export const ProductCard = ({ product }: ProductCardProps) => {
+  const images = product.images as Record<"alt" | "src", string>[]
+
   return (
     <Link href={`${APP_ROUTES.PRODUCT}/${product.id}`}>
-      <Card className="w-auto cursor-pointer">
+      <Card className="relative w-auto cursor-pointer">
+        <Badge variant="celcius" className="absolute right-4 top-4 z-10 py-2">
+          {product.isAvailable ? "В наличии" : "Под заказ"}
+        </Badge>
         <CardHeader>
-          {product.images_src && product.images_src.length > 0 && (
-            <div className="transition duration-300 hover:scale-110">
+          {images && images.length > 0 && (
+            <div className="relative mb-4 overflow-hidden rounded-lg bg-cover bg-no-repeat">
               <img
-                className="h-auto rounded-lg"
-                src={product.images_src[0].src}
-                alt={product.images_src[0].alt}
+                className="transition duration-300 ease-in-out hover:scale-105 "
+                src={images[0].src}
+                alt={images[0].alt}
               />
             </div>
           )}
         </CardHeader>
         <CardContent>
-          <CardTitle>{product.name}</CardTitle>
+          <CardTitle className="text-balance">{product.name}</CardTitle>
         </CardContent>
         <CardFooter className="flex justify-between gap-2">
           <p>{product.price} руб</p>
-          <Badge variant={"default"}>
-            {product.is_available ? "В наличии" : "Под заказ"}
-          </Badge>
         </CardFooter>
       </Card>
     </Link>

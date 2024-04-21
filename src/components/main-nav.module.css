@@ -4,3 +4,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.main-nav-title-hover:hover {
+  background: -webkit-linear-gradient(90deg, rgba(79,99,145,1) 0%, rgba(128,119,153,1) 30%, rgba(226,161,171,1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.5s ease-out
+}

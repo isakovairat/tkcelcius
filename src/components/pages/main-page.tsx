@@ -2,9 +2,6 @@
 
 import { useMemo, useState } from "react"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
-import { getBrands } from "@/src/api/brands"
-import { getCategories } from "@/src/api/categories"
-import { getProducts } from "@/src/api/products"
 import { ProductCard } from "@/src/components/product-card"
 import { Button } from "@/src/components/ui/button"
 import {
@@ -14,12 +11,15 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/src/components/ui/select"
+import { Brand, Category, Product } from "@prisma/client"
 
-const MainPage = () => {
-  const products = getProducts()
-  const categories = getCategories()
-  const brands = getBrands()
+type MainPageProps = {
+  categories: Category[]
+  products: Product[]
+  brands: Brand[]
+}
 
+const MainPage = ({ categories, products, brands }: MainPageProps) => {
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
@@ -81,14 +81,14 @@ const MainPage = () => {
         if (selectedCategory === categories[0].id) {
           return true
         } else {
-          return product.category_id === selectedCategory
+          return product.categoryId === selectedCategory
         }
       })
       .filter((product) => {
         if (selectedBrand === brands[0].id) {
           return true
         } else {
-          return product.brand_id === selectedBrand
+          return product.brandId === selectedBrand
         }
       })
   }, [products, selectedCategory, categories, selectedBrand, brands])
@@ -135,7 +135,12 @@ const MainPage = () => {
           </Select>
         </div>
         <div>
-          <Button onClick={handleCleanFilters}>Очистить фильтры</Button>
+          <Button
+            onClick={handleCleanFilters}
+            className="bg-[#466391] hover:hover:bg-[#466391]"
+          >
+            Очистить фильтры
+          </Button>
         </div>
       </div>
       {filteredProducts.length === 0 && (

@@ -1,8 +1,8 @@
-import { Metadata } from "next"
+import { Metadata, ResolvingMetadata } from "next"
 import Link from "next/link"
 import { getCategory } from "@/src/api/categories"
 import { getProduct, getProducts } from "@/src/api/products"
-import ProductCarousel from "@/src/components/product-caroisel"
+import ProductCarousel from "@/src/components/product-carousel"
 import { Badge } from "@/src/components/ui/badge"
 import {
   Breadcrumb,
@@ -13,17 +13,48 @@ import {
 } from "@/src/components/ui/breadcrumb"
 import { Button } from "@/src/components/ui/button"
 import { APP_ROUTES, siteConfig } from "@/src/config/site"
+import { Product } from "@prisma/client"
+import { KeyRound } from "lucide-react"
 
-export function generateStaticParams() {
-  return getProducts().map((product) => ({ id: product.id.toString() }))
+type Props = {
+  params: { id: string }
+  searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export default function Page({ params }: { params: { id: string } }) {
-  const product = getProduct(params.id)
-  const category = getCategory(product?.category_id as number)
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const id = params.id
+  const product = await getProduct(Number(id))
+  // optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || []
+  const images = product?.images as Record<string, string>[]
+
+  return {
+    title: product?.name,
+    description: product?.description,
+    openGraph: {
+      images: [images[0].src, ...previousImages],
+    },
+  }
+}
+
+export async function generateStaticParams() {
+  const products = await getProducts()
+
+  return products.map((product) => ({ id: product.id.toString() }))
+}
+
+export default async function Page({ params }: { params: { id: string } }) {
+  const product = await getProduct(Number(params.id))
+  const category = await getCategory(
+    product?.categoryId as Product["categoryId"]
+  )
+  const images = product?.images as Record<"src" | "alt", string>[]
 
   return (
-    <section className="container items-center pb-8 pt-6 md:py-10">
+    <section className="container max-w-5xl items-center pb-8 pt-6 md:py-10">
       <Breadcrumb className="mb-4">
         <BreadcrumbList>
           <BreadcrumbItem className="font-semibold">
@@ -51,52 +82,55 @@ export default function Page({ params }: { params: { id: string } }) {
       </Breadcrumb>
       <h1 className="text-3xl font-extrabold">{product?.name}</h1>
       <div className="flex flex-col gap-4 lg:flex-row lg:justify-between lg:gap-6">
-        {product?.images_src && product?.images_src.length > 0 && (
+        {images && images.length > 0 && (
           <div className="m-9 w-fit">
-            <ProductCarousel product={product} />
+            <ProductCarousel images={images} />
           </div>
         )}
-        <div className="flex flex-col gap-2 lg:mt-9 lg:w-3/6">
-          <div className="flex gap-4">
-            <p className="font-bold">Наличие</p>
-            <Badge variant={"default"}>
-              {product?.is_available ? "В наличии" : "Под заказ"}
-            </Badge>
-          </div>
-          <div className="flex flex-row items-center justify-between gap-2">
-            <div>
-              <p className="pb-2 font-bold">Цена</p>
-              <p className="text-3xl font-bold">{product?.price} ₽</p>
-            </div>
-            <div>
-              <Link href={"https://wa.me/79680008301?text=Здравствуйте"}>
-                <Button size={"lg"}>Купить</Button>
-              </Link>
-            </div>
-          </div>
-          <div className="my-2 h-px w-full bg-gray-300" />
-          <div>
-            <p className="pb-2 font-bold">Описание</p>
-            <p className="text-md">{product?.description}</p>
-          </div>
-        </div>
-      </div>
-      {product?.specifications && (
-        <div className="flex flex-col gap-2">
-          <div className="my-2 h-px w-full bg-gray-300" />
-          <p className="pb-2 font-bold">Технические характеристики</p>
-          <table className="table-auto border border-slate-400">
-            <tbody>
+        {product?.specifications && (
+          <div className="mb-2 mt-6 flex flex-col gap-2">
+            <p className="pb-2 font-bold">Технические характеристики</p>
+            <table>
               {Object.entries(product?.specifications).map(([key, value]) => (
                 <tr key={key}>
-                  <td className="border border-slate-300 p-2">{key}</td>
-                  <td className="border border-slate-300 p-2">{value}</td>
+                  <td className="text-balance border-b py-1 text-sm font-medium text-muted-foreground">
+                    {key}
+                  </td>
+                  <td className="text-balance border-b text-right text-sm">
+                    {value}
+                  </td>
                 </tr>
               ))}
-            </tbody>
-          </table>
+            </table>
+          </div>
+        )}
+      </div>
+      <div className="mt-6 flex flex-col gap-2">
+        <div className="flex gap-4">
+          <p className="font-bold">Наличие</p>
+          <Badge variant={"celcius"}>
+            {product?.isAvailable ? "В наличии" : "Под заказ"}
+          </Badge>
         </div>
-      )}
+        <div className="flex flex-row items-center justify-between gap-2">
+          <div>
+            <p className="pb-2 font-bold">Цена</p>
+            <p className="text-3xl font-bold">{product?.price} ₽</p>
+          </div>
+          <div>
+            <Link href={"https://wa.me/79680008301?text=Здравствуйте"}>
+              <Button size={"lg"} className="bg-[#466391] hover:bg-[#466391]">
+                Купить
+              </Button>
+            </Link>
+          </div>
+        </div>
+        <div className="my-2 h-px w-full bg-gray-300" />
+        <div>
+          <p className="pb-2 font-bold">Описание</p>
+          <p className="text-md">{product?.description}</p>
+        </div>
+      </div>
     </section>
   )
 }

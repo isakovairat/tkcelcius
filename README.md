@@ -20,3 +20,11 @@ npx create-next-app -e https://github.com/shadcn/next-template
 ## License
 
 Licensed under the [MIT license](https://github.com/shadcn/ui/blob/main/LICENSE.md).
+
+## Docker compose file for local development
+https://thriveread.com/adminer-with-docker-compose-mysql-and-postgres/
+
+## First start with Prisma
+npx prisma generate
+npx prisma db push
+npx prisma db seed

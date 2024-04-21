@@ -3,7 +3,6 @@
 import Link from "next/link"
 import { Icons } from "@/src/components/icons"
 import { MainNav } from "@/src/components/main-nav"
-import { ThemeToggle } from "@/src/components/theme-toggle"
 import { Button, buttonVariants } from "@/src/components/ui/button"
 import { siteConfig } from "@/src/config/site"
 import { useSidebarStore } from "@/src/stores/sidebarStore"
@@ -19,11 +18,11 @@ export function SiteHeader() {
 
   return (
     <>
-      <header className="sticky top-0 z-40 w-full border-b bg-background">
+      <header className="sticky top-0 z-40 w-full border-b bg-[#466391]">
         <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
           <MainNav items={siteConfig.mainNav} />
           <div className="flex flex-1 items-center justify-end space-x-4">
-            <nav className="flex items-center space-x-1">
+            <nav className="flex items-center space-x-1 text-slate-50">
               <Link href={`tel:${siteConfig.phone}`} rel="noreferrer">
                 <div
                   role="button"
@@ -36,7 +35,6 @@ export function SiteHeader() {
                   <span className="sr-only">phone</span>
                 </div>
               </Link>
-              <ThemeToggle />
               <Button
                 variant="ghost"
                 size="icon"

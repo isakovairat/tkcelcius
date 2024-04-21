@@ -79,3 +79,13 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../../public/fonts/ofont.ru_Raleway.woff2");
+}
+
+@font-face {
+  font-family: "Hero";
+  src: url("../../public/fonts/ofont.ru_Hero.woff2");
+}

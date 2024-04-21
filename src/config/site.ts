@@ -14,7 +14,7 @@ export const S3_URL =
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "ТК Цельсий",
+  name: "Celcius",
   description: "Мир торгового холодильного оборудования",
   phone: "+79680008301",
   email: "tccelsius@mail.ru",

@@ -55,6 +55,8 @@ module.exports = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
+        raleway: ["Raleway", "sans-serif"],
+        hero: ["Hero", "sans"],
       },
       keyframes: {
         "accordion-down": {
