@@ -50,6 +50,10 @@ export default async function Page({ params }: { params: { id: string } }) {
     product?.categoryId as Product["categoryId"]
   )
   const images = product?.images as Record<"src" | "alt", string>[]
+  const specifications = product?.specifications as Record<
+    "key" | "value",
+    string
+  >[]
 
   return (
     <section className="container max-w-5xl items-center pb-8 pt-6 md:py-10">
@@ -85,11 +89,11 @@ export default async function Page({ params }: { params: { id: string } }) {
             <ProductCarousel images={images} />
           </div>
         )}
-        {product?.specifications && (
+        {specifications.length > 0 && (
           <div className="mb-2 mt-6 flex flex-col gap-2 lg:w-1/2">
             <p className="pb-2 font-bold">Технические характеристики</p>
             <table>
-              {Object.entries(product?.specifications).map(([key, value]) => (
+              {specifications.map(({ key, value }) => (
                 <tr key={key}>
                   <td className="text-balance border-b py-1 text-sm font-medium text-muted-foreground">
                     {key}
