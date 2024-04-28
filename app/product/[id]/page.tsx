@@ -125,11 +125,20 @@ export default async function Page({ params }: { params: { id: string } }) {
             </Link>
           </div>
         </div>
-        <div className="my-2 h-px w-full bg-gray-300" />
-        <div>
-          <p className="pb-2 font-bold">Описание</p>
-          <p className="text-md">{product?.description}</p>
-        </div>
+        {product?.description && (
+          <>
+            <div className="my-2 h-px w-full bg-gray-300" />
+            <div>
+              <p className="pb-2 font-bold">Описание</p>
+              <div
+                className="text-md"
+                dangerouslySetInnerHTML={{
+                  __html: product.description as string,
+                }}
+              />
+            </div>
+          </>
+        )}
       </div>
     </section>
   )
