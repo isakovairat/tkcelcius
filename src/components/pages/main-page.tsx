@@ -30,6 +30,27 @@ const MainPage = ({ categories, products, brands }: MainPageProps) => {
     Number(searchParams.get("brand")) || brands[0].id
   )
 
+  const defaultCategoryId = useMemo(() => categories[0].id, [categories])
+  const defaultBrandId = useMemo(() => brands[0].id, [brands])
+
+  const filteredProducts = useMemo(() => {
+    return products.filter((product) => {
+      const isCategoryMatch =
+        selectedCategory === defaultCategoryId ||
+        product.categoryId === selectedCategory
+      const isBrandMatch =
+        selectedBrand === defaultBrandId || product.brandId === selectedBrand
+
+      return isCategoryMatch && isBrandMatch
+    })
+  }, [
+    products,
+    selectedCategory,
+    defaultCategoryId,
+    selectedBrand,
+    defaultBrandId,
+  ])
+
   const handleCategoryChange = (id: string) => {
     setSelectedCategory(Number(id))
 
@@ -69,29 +90,11 @@ const MainPage = ({ categories, products, brands }: MainPageProps) => {
   }
 
   const handleCleanFilters = () => {
-    setSelectedCategory(categories[0].id)
-    setSelectedBrand(brands[0].id)
+    setSelectedCategory(defaultCategoryId)
+    setSelectedBrand(defaultBrandId)
 
     router.push(`${pathname}`, { scroll: false })
   }
-
-  const filteredProducts = useMemo(() => {
-    return products
-      .filter((product) => {
-        if (selectedCategory === categories[0].id) {
-          return true
-        } else {
-          return product.categoryId === selectedCategory
-        }
-      })
-      .filter((product) => {
-        if (selectedBrand === brands[0].id) {
-          return true
-        } else {
-          return product.brandId === selectedBrand
-        }
-      })
-  }, [products, selectedCategory, categories, selectedBrand, brands])
 
   return (
     <>

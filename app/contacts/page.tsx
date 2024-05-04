@@ -1,6 +1,22 @@
+import { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/src/components/ui/button"
 import { siteConfig } from "@/src/config/site"
+
+export const metadata: Metadata = {
+  title: {
+    default: "Контакты",
+    template: `%s - ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  themeColor: [{ media: "(prefers-color-scheme: light)", color: "white" }],
+  icons: {
+    icon: "/favicon.ico",
+  },
+  openGraph: {
+    images: ["/images/banner.jpg"],
+  },
+}
 
 export default function Page() {
   return (

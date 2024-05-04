@@ -1,4 +1,22 @@
 /* eslint-disable @next/next/no-img-element */
+
+import { Metadata } from "next"
+import { siteConfig } from "@/src/config/site"
+
+export const metadata: Metadata = {
+  title: {
+    default: "Наши работы",
+    template: `%s - ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  themeColor: [{ media: "(prefers-color-scheme: light)", color: "white" }],
+  icons: {
+    icon: "/favicon.ico",
+  },
+  openGraph: {
+    images: ["/images/banner.jpg"],
+  },
+}
 export default function Page() {
   return (
     <section className="container items-center pb-8 pt-6 md:py-10">

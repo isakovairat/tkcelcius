@@ -1,4 +1,21 @@
+import { Metadata } from "next"
+import { siteConfig } from "@/src/config/site"
 import { Box, KeyRound, Truck, Wallet, Wrench } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: {
+    default: "O нас",
+    template: `%s - ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  themeColor: [{ media: "(prefers-color-scheme: light)", color: "white" }],
+  icons: {
+    icon: "/favicon.ico",
+  },
+  openGraph: {
+    images: ["/images/banner.jpg"],
+  },
+}
 
 /* eslint-disable @next/next/no-img-element */
 export default function Page() {

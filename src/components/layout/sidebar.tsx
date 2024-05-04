@@ -21,7 +21,7 @@ export const Sidebar = () => {
       )}
       aria-label="Sidebar"
     >
-      <div className="h-full overflow-y-auto bg-background">
+      <div className="h-full overflow-y-auto bg-[#EEF4F6]">
         <div className="container flex h-[65px] items-center justify-between border-b bg-[#466391]">
           <Link
             href="/"
@@ -59,7 +59,7 @@ export const Sidebar = () => {
             </Link>
           ))}
         </nav>
-        <div className="absolute bottom-0 w-full">
+        <div className="w-full">
           <div className="container my-10 flex flex-wrap gap-6 md:flex-row">
             <Link href={`tel:${siteConfig.phone}`} className="w-full">
               <Button className="w-full bg-[#466391] hover:hover:bg-[#466391]">

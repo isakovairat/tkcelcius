@@ -10,7 +10,7 @@ import { cn } from "@/src/lib/utils"
 
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.name,
+    default: "Главная",
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -34,15 +34,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <head />
         <body
           className={cn(
-            "min-h-screen bg-background font-sans antialiased",
+            "min-h-screen bg-[#EEF4F6] font-sans antialiased",
             fontSans.variable
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
             <div className="relative flex min-h-screen flex-col">
               <SiteHeader />
-              <div className="flex-1">{children}</div>
-              <Footer items={siteConfig.mainNav} />
+              <div className="flex-1 ">{children}</div>
+              <Footer />
             </div>
             <TailwindIndicator />
           </ThemeProvider>

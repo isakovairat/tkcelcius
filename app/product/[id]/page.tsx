@@ -90,7 +90,7 @@ export default async function Page({ params }: { params: { id: string } }) {
           </div>
         )}
         {specifications.length > 0 && (
-          <div className="mb-2 mt-6 flex flex-col gap-2 lg:w-1/2">
+          <div className="mb-2 mt-6 flex flex-col gap-2 lg:w-2/5">
             <p className="pb-2 font-bold">Технические характеристики</p>
             <table>
               {specifications.map(({ key, value }) => (
@@ -123,7 +123,7 @@ export default async function Page({ params }: { params: { id: string } }) {
             <Link
               href={`https://wa.me/79680008301?text=Здравствуйте, хочу купить ${product?.name}`}
             >
-              <Button size={"lg"} className="bg-[#466391] hover:bg-[#466391]">
+              <Button size={"lg"} className="bg-[#e2a1ab] hover:bg-[#e2a1ab]">
                 Купить
               </Button>
             </Link>
