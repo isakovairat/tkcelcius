@@ -19,7 +19,7 @@ export default async function Page() {
       <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
         <div className="mt-5 flex flex-col items-center justify-center gap-1">
           <div className="flex flex-col items-center justify-center md:flex-row">
-            <img className="w-[160px]" src="/images/logo.png" alt="logo" />
+            <img className="w-[140px]" src="/images/logo.png" alt="logo" />
             <h1
               className={cn(
                 "relative z-20 text-center font-raleway text-5xl font-bold uppercase md:text-7xl",

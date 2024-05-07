@@ -95,7 +95,7 @@ export default async function Page({ params }: { params: { id: string } }) {
             <table>
               {specifications.map(({ key, value }) => (
                 <tr key={key}>
-                  <td className="text-balance border-b py-1 text-sm font-medium text-muted-foreground">
+                  <td className="text-balance border-b text-sm font-medium text-muted-foreground">
                     {key}
                   </td>
                   <td className="text-balance border-b text-right text-sm lowercase">
