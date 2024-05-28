@@ -4,37 +4,37 @@ async function getSitemap() {
   const products = await getProducts()
   const map = [
     {
-      url: "https://tkcelcius.ru/",
+      url: "https://www.tccelsius.ru/",
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 1,
     },
     {
-      url: "https://tkcelcius.ru/3d",
+      url: "https://www.tccelsius.ru/3d",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.5,
     },
     {
-      url: "https://tkcelcius.ru/about",
+      url: "https://www.tccelsius.ru/about",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.5,
     },
     {
-      url: "https://tkcelcius.ru/contacts",
+      url: "https://www.tccelsius.ru/contacts",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.5,
     },
     {
-      url: "https://tkcelcius.ru/works",
+      url: "https://www.tccelsius.ru/works",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.5,
     },
     ...products.map((product) => ({
-      url: `https://tkcelcius.ru/product/${product.id}`,
+      url: `https://www.tccelsius.ru/product/${product.id}`,
       lastModified: product.updatedAt,
       changeFrequency: "daily",
       priority: 0.8,

@@ -5,7 +5,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      disallow: ["/api/", "/_next/", "/static/"],
     },
-    sitemap: "https://tkcelcius.ru/sitemap.xml",
+    sitemap: "https://www.tccelsius.ru/sitemap.xml",
   }
 }

@@ -26,7 +26,7 @@ export default function Page() {
           <div className="mx-auto place-self-center">
             <img
               className="mb-4 h-auto w-full rounded-lg"
-              src="http://www.tccelsius.ru/assets/images/works/work1.jpeg"
+              src="/images/work1.jpeg"
               alt=""
             />
             <p className="max-w-2xl font-light text-gray-500 dark:text-gray-400 md:text-lg lg:text-xl">
@@ -40,7 +40,7 @@ export default function Page() {
           <div className="mr-auto place-self-center">
             <img
               className="mb-4 h-auto w-full rounded-lg"
-              src="http://www.tccelsius.ru/assets/images/works/work4.jpeg"
+              src="/images/work4.jpeg"
               alt=""
             />
             <p className="max-w-2xl font-light text-gray-500 dark:text-gray-400 md:text-lg lg:text-xl">
@@ -55,7 +55,7 @@ export default function Page() {
           <div className="mr-auto place-self-center">
             <img
               className="mb-4 h-auto w-full rounded-lg"
-              src="http://www.tccelsius.ru/assets/images/works/work2.jpeg"
+              src="/images/work2.jpeg"
               alt=""
             />
             <p className="max-w-2xl font-light text-gray-500 dark:text-gray-400 md:text-lg lg:text-xl">
@@ -70,7 +70,7 @@ export default function Page() {
           <div className="mr-auto place-self-center ">
             <img
               className="mb-4 h-auto w-full rounded-lg"
-              src="http://www.tccelsius.ru/assets/images/works/work3.jpeg"
+              src="/images/work3.jpeg"
               alt=""
             />
             <p className="max-w-2xl font-light text-gray-500 dark:text-gray-400 md:text-lg lg:text-xl">

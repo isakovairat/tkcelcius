@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Icons } from "@/src/components/icons"
 import { MainNav } from "@/src/components/main-nav"
 import { Button, buttonVariants } from "@/src/components/ui/button"
-import { siteConfig } from "@/src/config/site"
+import { APP_ROUTES, siteConfig } from "@/src/config/site"
 import { useSidebarStore } from "@/src/stores/sidebarStore"
 import { useScrollLock } from "usehooks-ts"
 
@@ -23,6 +23,18 @@ export function SiteHeader() {
           <MainNav items={siteConfig.mainNav} />
           <div className="flex flex-1 items-center justify-end space-x-4">
             <nav className="flex items-center space-x-1 text-slate-50">
+              <Link href={APP_ROUTES.SEARCH} rel="noreferrer">
+                <div
+                  role="button"
+                  className={buttonVariants({
+                    size: "icon",
+                    variant: "ghost",
+                  })}
+                >
+                  <Icons.search className="size-5" />
+                  <span className="sr-only">search</span>
+                </div>
+              </Link>
               <Link href={`tel:${siteConfig.phone}`} rel="noreferrer">
                 <div
                   role="button"
