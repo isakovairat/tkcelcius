@@ -39,7 +39,7 @@
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "c": "7.51.0",
+    "react-hook-form": "7.51.0",
     "sharp": "^0.31.3",
     "simplex-noise": "^4.0.1",
     "swiper": "^11.1.0",

@@ -34,3 +34,7 @@ yarn-error.log*
 
 .contentlayer
 .env
+
+*.zip
+public_html
+.yarn/install-state.gz
