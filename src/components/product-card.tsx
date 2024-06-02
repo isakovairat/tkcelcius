@@ -16,7 +16,10 @@ export const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <Link href={`${APP_ROUTES.PRODUCT}/${product.id}`}>
       <Card className="relative w-auto cursor-pointer">
-        <Badge variant="celcius" className="absolute right-4 top-4 z-10 py-2">
+        <Badge
+          variant={product.isAvailable ? "celsius" : "celsiusSecondary"}
+          className="absolute right-4 top-4 z-10 py-2"
+        >
           {product.isAvailable ? "В наличии" : "Под заказ"}
         </Badge>
         <CardHeader>
@@ -31,7 +34,9 @@ export const ProductCard = ({ product }: ProductCardProps) => {
           )}
         </CardHeader>
         <CardContent>
-          <CardTitle className="text-balance">{product.name}</CardTitle>
+          <CardTitle className="min-h-[48px] text-balance">
+            {product.name}
+          </CardTitle>
         </CardContent>
         <CardFooter className="flex justify-between gap-2">
           <p>{product.price} руб</p>

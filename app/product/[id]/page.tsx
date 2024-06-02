@@ -110,7 +110,7 @@ export default async function Page({ params }: { params: { id: string } }) {
       <div className="mt-6 flex flex-col gap-2">
         <div className="flex gap-4">
           <p className="font-bold">Наличие</p>
-          <Badge variant={"celcius"}>
+          <Badge variant={"celsius"}>
             {product?.isAvailable ? "В наличии" : "Под заказ"}
           </Badge>
         </div>
@@ -123,7 +123,10 @@ export default async function Page({ params }: { params: { id: string } }) {
             <Link
               href={`https://wa.me/79680008301?text=Здравствуйте, хочу купить ${product?.name}`}
             >
-              <Button size={"lg"} className="bg-[#e2a1ab] hover:bg-[#e2a1ab]">
+              <Button
+                size={"lg"}
+                className="bg-[#E22542] transition duration-500 hover:scale-105 hover:bg-[#E22542]"
+              >
                 Купить
               </Button>
             </Link>
