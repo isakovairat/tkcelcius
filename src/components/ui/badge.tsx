@@ -17,7 +17,7 @@ const badgeVariants = cva(
         celsius:
           "border-transparent bg-[#466391] text-primary-foreground hover:bg-[#466391]/80",
         celsiusSecondary:
-          "border-transparent bg-[#727E91] text-primary-foreground hover:bg-[#466391]/80",
+          "border-transparent bg-[#878B91] text-primary-foreground hover:bg-[#878B91]/80 opacity-30",
       },
     },
     defaultVariants: {
