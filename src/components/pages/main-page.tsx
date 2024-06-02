@@ -44,7 +44,6 @@ const MainPage = ({ categories, products, brands }: MainPageProps) => {
     let searchResults = products
     if (fuse && search.trim().length > 0) {
       searchResults = fuse.search(search).map((el: any) => el.item)
-      console.log("searchResults", searchResults)
     }
 
     return searchResults.filter((product: Product) => {
