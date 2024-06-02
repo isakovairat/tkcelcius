@@ -11,7 +11,7 @@ export const APP_ROUTES = {
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Celcius",
+  name: "Celsius",
   description: "Мир торгового холодильного оборудования",
   phone: "+79680008301",
   email: "tccelsius@mail.ru",

@@ -14,8 +14,10 @@ const badgeVariants = cva(
         destructive:
           "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
         outline: "text-foreground",
-        celcius:
+        celsius:
           "border-transparent bg-[#466391] text-primary-foreground hover:bg-[#466391]/80",
+        celsiusSecondary:
+          "border-transparent bg-[#727E91] text-primary-foreground hover:bg-[#466391]/80",
       },
     },
     defaultVariants: {

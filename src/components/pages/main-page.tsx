@@ -1,6 +1,6 @@
 "use client"
 
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import { ProductCard } from "@/src/components/product-card"
 import { Button } from "@/src/components/ui/button"
@@ -11,7 +11,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/src/components/ui/select"
+import { createFuseInstance, options } from "@/src/lib/fuseSetup"
 import { Brand, Category, Product } from "@prisma/client"
+import { useDebounceCallback } from "usehooks-ts"
+
+import { Icons } from "../icons"
+import { Input } from "../ui/input"
 
 type MainPageProps = {
   categories: Category[]
@@ -29,12 +34,20 @@ const MainPage = ({ categories, products, brands }: MainPageProps) => {
   const [selectedBrand, setSelectedBrand] = useState(
     Number(searchParams.get("brand")) || brands[0].id
   )
+  const [search, setSearch] = useState(searchParams.get("query") || "")
+  const [fuse, setFuse] = useState<Fuse<Product> | null>(null)
 
   const defaultCategoryId = useMemo(() => categories[0].id, [categories])
   const defaultBrandId = useMemo(() => brands[0].id, [brands])
 
   const filteredProducts = useMemo(() => {
-    return products.filter((product) => {
+    let searchResults = products
+    if (fuse && search.trim().length > 0) {
+      searchResults = fuse.search(search).map((el: any) => el.item)
+      console.log("searchResults", searchResults)
+    }
+
+    return searchResults.filter((product: Product) => {
       const isCategoryMatch =
         selectedCategory === defaultCategoryId ||
         product.categoryId === selectedCategory
@@ -45,11 +58,18 @@ const MainPage = ({ categories, products, brands }: MainPageProps) => {
     })
   }, [
     products,
+    fuse,
+    search,
     selectedCategory,
     defaultCategoryId,
     selectedBrand,
     defaultBrandId,
   ])
+
+  useEffect(() => {
+    const fuseInstance = createFuseInstance(products, options)
+    setFuse(fuseInstance)
+  }, [products])
 
   const handleCategoryChange = (id: string) => {
     setSelectedCategory(Number(id))
@@ -92,14 +112,47 @@ const MainPage = ({ categories, products, brands }: MainPageProps) => {
   const handleCleanFilters = () => {
     setSelectedCategory(defaultCategoryId)
     setSelectedBrand(defaultBrandId)
+    setSearch("")
 
     router.push(`${pathname}`, { scroll: false })
   }
 
+  const handleSearch = (value: string) => {
+    setSearch(value)
+    // const current = new URLSearchParams(Array.from(searchParams.entries())) // -> has to use this form
+
+    // if (!value) {
+    //   current.delete("query")
+    // } else {
+    //   current.set("query", value)
+    // }
+
+    // cast to string
+    // const searchValue = current.toString()
+    // or const query = `${'?'.repeat(search.length && 1)}${search}`;
+    // const query = searchValue ? `?${searchValue}` : ""
+
+    // router.push(`${pathname}${query}`, { scroll: false })
+  }
+
+  const debounced = useDebounceCallback(handleSearch, 500)
+
   return (
     <>
-      <div className="flex flex-wrap gap-6 md:flex-nowrap">
-        <div className="w-full sm:w-[150px] md:w-[200px]">
+      <div className="flex flex-wrap items-center gap-6 lg:flex-nowrap">
+        <div className="flex w-full items-center gap-4 md:w-auto">
+          <div className="relative w-full md:w-auto">
+            <Icons.search className="absolute inset-y-0 my-auto ml-2 size-5" />
+            <Input
+              onChange={(event) => debounced(event.target.value)}
+              placeholder="Введите название товара"
+              type="search"
+              className="pl-10 pr-4 md:w-[400px]"
+            />
+            <span className="sr-only">Search</span>
+          </div>
+        </div>
+        <div className=" w-full sm:w-[150px] md:w-[200px]">
           <Select
             onValueChange={handleCategoryChange}
             value={selectedCategory.toString()}
@@ -150,7 +203,7 @@ const MainPage = ({ categories, products, brands }: MainPageProps) => {
         <div className="col-span-full">Ничего не найдено</div>
       )}
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {filteredProducts.map((product) => {
+        {filteredProducts.map((product: Product) => {
           return <ProductCard key={product.id} product={product} />
         })}
       </div>
