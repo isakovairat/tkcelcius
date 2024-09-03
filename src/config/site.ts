@@ -12,6 +12,7 @@ export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
   name: "Celsius",
+  url: "https://www.tccelsius.ru",
   description: "Мир торгового холодильного оборудования",
   phone: "+79680008301",
   email: "tccelsius@mail.ru",

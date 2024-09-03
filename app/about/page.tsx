@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   openGraph: {
-    images: ["/images/banner.jpg"],
+    images: [`${siteConfig.url}/images/banner.jpg`],
   },
 }
 

@@ -12,7 +12,7 @@ import {
   BreadcrumbSeparator,
 } from "@/src/components/ui/breadcrumb"
 import { Button } from "@/src/components/ui/button"
-import { APP_ROUTES } from "@/src/config/site"
+import { APP_ROUTES, siteConfig } from "@/src/config/site"
 import { Product } from "@prisma/client"
 
 type Props = {
@@ -33,7 +33,7 @@ export async function generateMetadata(
     title: product?.name,
     description: product?.description,
     openGraph: {
-      images: [images[0].src, ...previousImages],
+      images: [`${siteConfig.url}${images[0].src}`, ...previousImages],
     },
   }
 }
