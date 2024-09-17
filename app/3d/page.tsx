@@ -12,7 +12,10 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  robots: "index, follow",
   openGraph: {
+    title: `3D - ${siteConfig.name}`,
+    description: siteConfig.description,
     images: [`${siteConfig.url}/images/banner.jpg`],
   },
 }

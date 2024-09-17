@@ -38,3 +38,5 @@ yarn-error.log*
 *.zip
 public_html
 .yarn/install-state.gz
+
+.idea

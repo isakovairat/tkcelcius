@@ -31,8 +31,11 @@ export async function generateMetadata(
 
   return {
     title: product?.name,
-    description: product?.description,
+    description: product?.seoDescription,
+    robots: "index, follow",
     openGraph: {
+      title: `${product?.name} - ${siteConfig.name}`,
+      description: product?.seoDescription ?? product?.description,
       images: [`${siteConfig.url}${images[0].src}`, ...previousImages],
     },
   }
