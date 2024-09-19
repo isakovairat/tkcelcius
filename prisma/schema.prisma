@@ -14,8 +14,8 @@ model Product {
   updatedAt      DateTime @updatedAt
   name           String   @db.VarChar(255)
   price          Int
-  seoDescription String?  @db.MediumText
   description    String   @db.MediumText
+  seoDescription String?  @db.MediumText
   specifications Json
   categoryId     Int
   brandId        Int
