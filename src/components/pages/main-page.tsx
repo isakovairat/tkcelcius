@@ -17,6 +17,7 @@ import { useDebounceCallback } from "usehooks-ts"
 
 import { Icons } from "../icons"
 import { Input } from "../ui/input"
+import Fuse from "fuse.js"
 
 type MainPageProps = {
   categories: Category[]
@@ -118,20 +119,6 @@ const MainPage = ({ categories, products, brands }: MainPageProps) => {
 
   const handleSearch = (value: string) => {
     setSearch(value)
-    // const current = new URLSearchParams(Array.from(searchParams.entries())) // -> has to use this form
-
-    // if (!value) {
-    //   current.delete("query")
-    // } else {
-    //   current.set("query", value)
-    // }
-
-    // cast to string
-    // const searchValue = current.toString()
-    // or const query = `${'?'.repeat(search.length && 1)}${search}`;
-    // const query = searchValue ? `?${searchValue}` : ""
-
-    // router.push(`${pathname}${query}`, { scroll: false })
   }
 
   const debounced = useDebounceCallback(handleSearch, 500)

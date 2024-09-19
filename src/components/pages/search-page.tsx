@@ -10,6 +10,7 @@ import { useForm } from "react-hook-form"
 
 import { ProductCard } from "../product-card"
 import { Button } from "../ui/button"
+import Fuse, { FuseResult } from "fuse.js"
 
 interface IFormInput {
   search: string
@@ -24,7 +25,7 @@ export const SearchPage = ({ products }: { products: Product[] }) => {
       search: searchParams.get("query") || "",
     },
   })
-  const [results, setResults] = useState<Fuse.FuseResult<Product>[] | null>(
+  const [results, setResults] = useState<FuseResult<Product>[] | null>(
     null
   )
   const [fuse, setFuse] = useState<Fuse<Product> | null>(null)

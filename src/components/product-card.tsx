@@ -34,7 +34,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
           )}
         </CardHeader>
         <CardContent>
-          <CardTitle className="min-h-[48px] text-balance">
+          <CardTitle className="line-clamp-2 min-h-12 text-balance">
             {product.name}
           </CardTitle>
         </CardContent>
