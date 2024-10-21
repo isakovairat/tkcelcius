@@ -1,10 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
 import "@/src/styles/globals.css"
 import { Metadata } from "next"
+import Script from "next/script"
 import { Footer } from "@/src/components/layout/footer"
 import { SiteHeader } from "@/src/components/layout/header"
 import { TailwindIndicator } from "@/src/components/tailwind-indicator"
 import { ThemeProvider } from "@/src/components/theme-provider"
-import { siteConfig } from "@/src/config/site"
+import { YANDEX_METRIKA, siteConfig } from "@/src/config/site"
 import { fontSans } from "@/src/lib/fonts"
 import { cn } from "@/src/lib/utils"
 
@@ -33,7 +35,22 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
       <html lang="ru" suppressHydrationWarning>
-        <head />
+        <head>
+          <Script
+            id="yandex-metrika"
+            type="text/javascript"
+            dangerouslySetInnerHTML={{ __html: YANDEX_METRIKA }}
+          />
+          <noscript>
+            <div>
+              <img
+                src="https://mc.yandex.ru/watch/91276036"
+                style={{ position: "absolute", left: "-9999px" }}
+                alt=""
+              />
+            </div>
+          </noscript>
+        </head>
         <body
           className={cn(
             "min-h-screen bg-background font-sans antialiased",
